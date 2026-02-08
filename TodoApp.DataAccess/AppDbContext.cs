@@ -12,7 +12,5 @@ namespace TodoApp.DataAccess
         }
 
         public DbSet<TodoItem> Todos { get; set; }
-
-        public DbSet<User> User { get; set; }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TodoApp.Core.Entities
 {
@@ -18,10 +17,7 @@ namespace TodoApp.Core.Entities
 
         public bool Status { get; set; }
 
-        [ForeignKey("User")]
-        public required string Author { get; set; }
+        public string? UserId { get; set; }
 
-        [ForeignKey("User")]
-        public required User UserId { get; set; }
     }
 }

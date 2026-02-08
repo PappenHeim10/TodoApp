@@ -1,15 +1,15 @@
 services:
   db:
-    image: mysql:8.0
-    container_name: todo-mysql-db 
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: todo-mssql-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: secret
-      MYSQL_DATABASE: todo_app
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=thePassword123
     ports:
-      - "3306:3306"
+      - "1433:1433"
     volumes:
-      - db_data:/var/lib/mysql
+      - sql_data:/var/opt/mssql
 
 volumes:
-  db_data:
+  sql_data:
