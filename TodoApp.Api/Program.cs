@@ -13,6 +13,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddAuthorization();
 
+// 1. HIER NEU: Controller-Dienste registrieren
+// Ohne das weiﬂ die App nicht, dass es Controller-Klassen gibt.
+builder.Services.AddControllers();
+
 builder.Services.AddIdentityApiEndpoints<IdentityUser>()
     .AddEntityFrameworkStores<AppDbContext>();
 
@@ -30,5 +34,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapIdentityApi<IdentityUser>();
+
+// 2. HIER NEU: Controller-Routen aktivieren
+// Ohne das werden die Pfade (wie /api/todos) nicht gefunden.
+app.MapControllers();
 
 app.Run();

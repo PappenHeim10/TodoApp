@@ -6,7 +6,7 @@ using TodoApp.DataAccess;
 namespace TodoApp.Api.Controller
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[Controller]")]
     public class TodosControllers : ControllerBase
     {
         private readonly ILogger<TodosControllers> _logger;
@@ -19,18 +19,26 @@ namespace TodoApp.Api.Controller
         }
 
         [HttpGet]
-        [Route("see all")]
+        [Route("seeAll")]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodos()
         {
+            _logger.LogInformation("GetTodos method called");
+
             return await _context.Todos.ToListAsync();
         }
 
+
         [HttpPost]
-        [Route("create new")]
+        [Route("createNew")]
         public async Task<ActionResult<TodoItem>> CreateTodo(TodoItem todo)
         {
+
             _context.Todos.Add(todo);
+
+            _logger.LogInformation("CreateTodo method called with title: {Title}", todo.Title);
+
             await _context.SaveChangesAsync();
+
             return CreatedAtAction(nameof(GetTodos), new { id = todo.Id }, todo);
         }
     }
