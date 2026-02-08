@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Docker/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Project Path="TodoApp.Api/TodoApp.Api.csproj" />
+  <Project Path="TodoApp.Core/TodoApp.Core.csproj" />
+  <Project Path="TodoApp.DataAccess/TodoApp.DataAccess.csproj" />
+</Solution>
