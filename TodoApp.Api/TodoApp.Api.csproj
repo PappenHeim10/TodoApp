@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 	<PropertyGroup>
 		<TargetFramework>net10.0</TargetFramework>
 		<Nullable>enable</Nullable>
@@ -16,6 +16,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\TodoApp.Core\TodoApp.Core.csproj" />
 		<ProjectReference Include="..\TodoApp.DataAccess\TodoApp.DataAccess.csproj" />
+		<ProjectReference Include="..\TodoApp.Service\TodoApp.Service.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -5,4 +5,5 @@
   <Project Path="TodoApp.Api/TodoApp.Api.csproj" />
   <Project Path="TodoApp.Core/TodoApp.Core.csproj" />
   <Project Path="TodoApp.DataAccess/TodoApp.DataAccess.csproj" />
+  <Project Path="TodoApp.Service/TodoApp.Service.csproj" Id="70a1b9cb-d404-443d-aa91-7f5a39b2b238" />
 </Solution>

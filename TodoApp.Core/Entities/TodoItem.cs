@@ -18,6 +18,5 @@ namespace TodoApp.Core.Entities
         public bool Status { get; set; }
 
         public string? UserId { get; set; }
-
     }
 }
