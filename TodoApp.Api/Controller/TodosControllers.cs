@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using TodoApp.Core.DTOs;
-using TodoApp.Core.Entities;
 using TodoApp.Core.Interfaces;
-using TodoApp.DataAccess;
 
 namespace TodoApp.Api.Controller
 {
